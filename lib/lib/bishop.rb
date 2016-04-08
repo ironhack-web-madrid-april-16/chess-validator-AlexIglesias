@@ -3,8 +3,8 @@ class Bishop < Piece
   include DiagonalMover
 
 	def move?(dst_x, dst_y)
-		dx, dy = get_difference(dst_x, dst_y)
+		coord_x, coord_y = calculateCooord(dst_x, dst_y)
 
-		diagonal_move?(dx, dy)
+		diagonal_move?(coord_x, coord_y)
 	end
 end
